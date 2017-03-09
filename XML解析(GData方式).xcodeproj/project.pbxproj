@@ -13,6 +13,9 @@
 		CDEB7B001E717532006A660E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDEB7AFE1E717532006A660E /* Main.storyboard */; };
 		CDEB7B021E717532006A660E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDEB7B011E717532006A660E /* Assets.xcassets */; };
 		CDEB7B051E717532006A660E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDEB7B031E717532006A660E /* LaunchScreen.storyboard */; };
+		CDEB7B0F1E7176A7006A660E /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEB7B0E1E7176A7006A660E /* Video.m */; };
+		CDEB7B131E7177B9006A660E /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEB7B121E7177B9006A660E /* GDataXMLNode.m */; };
+		CDEB7B161E717C96006A660E /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CDEB7B151E717C96006A660E /* libxml2.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,11 @@
 		CDEB7B011E717532006A660E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDEB7B041E717532006A660E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CDEB7B061E717532006A660E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDEB7B0D1E7176A7006A660E /* Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Video.h; sourceTree = "<group>"; };
+		CDEB7B0E1E7176A7006A660E /* Video.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Video.m; sourceTree = "<group>"; };
+		CDEB7B111E7177B9006A660E /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
+		CDEB7B121E7177B9006A660E /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
+		CDEB7B151E717C96006A660E /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDEB7B161E717C96006A660E /* libxml2.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +53,7 @@
 			children = (
 				CDEB7AF41E717532006A660E /* XML解析(GData方式) */,
 				CDEB7AF31E717532006A660E /* Products */,
+				CDEB7B141E717C96006A660E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +68,8 @@
 		CDEB7AF41E717532006A660E /* XML解析(GData方式) */ = {
 			isa = PBXGroup;
 			children = (
+				CDEB7B101E7177B9006A660E /* GData */,
+				CDEB7B0C1E7176A7006A660E /* Model */,
 				CDEB7AF81E717532006A660E /* AppDelegate.h */,
 				CDEB7AF91E717532006A660E /* AppDelegate.m */,
 				CDEB7AFB1E717532006A660E /* ViewController.h */,
@@ -77,6 +89,32 @@
 				CDEB7AF61E717532006A660E /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CDEB7B0C1E7176A7006A660E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CDEB7B0D1E7176A7006A660E /* Video.h */,
+				CDEB7B0E1E7176A7006A660E /* Video.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CDEB7B101E7177B9006A660E /* GData */ = {
+			isa = PBXGroup;
+			children = (
+				CDEB7B111E7177B9006A660E /* GDataXMLNode.h */,
+				CDEB7B121E7177B9006A660E /* GDataXMLNode.m */,
+			);
+			path = GData;
+			sourceTree = "<group>";
+		};
+		CDEB7B141E717C96006A660E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CDEB7B151E717C96006A660E /* libxml2.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +190,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDEB7AFD1E717532006A660E /* ViewController.m in Sources */,
+				CDEB7B0F1E7176A7006A660E /* Video.m in Sources */,
+				CDEB7B131E7177B9006A660E /* GDataXMLNode.m in Sources */,
 				CDEB7AFA1E717532006A660E /* AppDelegate.m in Sources */,
 				CDEB7AF71E717532006A660E /* main.m in Sources */,
 			);
@@ -219,9 +259,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-lxml2";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -260,8 +302,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-lxml2";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -310,6 +354,7 @@
 				CDEB7B0B1E717532006A660E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
